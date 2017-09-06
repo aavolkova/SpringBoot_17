@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Spring Security Example </title>
+</head>
+<body>
+
+
+<form action="#"
+      th:action="@{/signin}"
+      th:object="${newUser}"
+      method="post">
+    <!--<input type="hidden" th:field="*{person.id}"/>-->
+    <!--<input type="hidden" th:field="*{id}"/>-->
+
+    <div class="form-group">
+        <label class="col-md-5 control-label">Email:</label>
+        <!--<div class="col-sm-13">-->
+        <input type="text" th:field="*{email}" class="form-control"/>
+        <!--<p><span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color:#b81624"/>  </p>-->
+        <!--</div>-->
+    </div>
+    <div class="form-group">
+        <label class="col-md-5 control-label">Password:</label>
+        <!--<div class="col-sm-13">-->
+        <input type="text" th:field="*{password}" class="form-control"/>
+        <!--<p><span th:if="${#fields.hasErrors('password')}" th:errors="*{password}" style="color:#b81624"/>  </p>-->
+        <!--</div>-->
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-5 control-label">First Name:</label>
+        <!--<div class="col-sm-13">-->
+        <input type="text" th:field="*{firstName}" class="form-control"/>
+        <!--<p><span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" style="color:#b81624"/>  </p>-->
+        <!--</div>-->
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-5 control-label">Last Name:</label>
+        <!--<div class="col-sm-13">-->
+        <input type="text" th:field="*{lastName}" class="form-control"/>
+        <!--<p><span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" style="color:#b81624"/>  </p>-->
+        <!--</div>-->
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-md-5 control-label">username:</label>
+        <!--<div class="col-sm-13">-->
+        <input type="text" th:field="*{username}" class="form-control"/>
+        <!--<p><span th:if="${#fields.hasErrors('username')}" th:errors="*{username}" style="color:#b81624"/>  </p>-->
+        <!--</div>-->
+    </div>
+
+
+
+
+
+    <div class="form-group">
+        <!--<input class="btn btn-secondary" type = "submit" value="Sign In"/></a><br><br>-->
+
+        <div><input type="submit" value="Create Account"/></div>
+    </div>
+
+</form>
+
+
+</body>
+</html>

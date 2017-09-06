@@ -25,7 +25,7 @@ public class User {
     private String lastName;
 
     @Column(name = "enabled")
-    private boolean enabled;
+    private boolean enabled;    //Active user or not
 
     @Column(name = "username")
     private String username;

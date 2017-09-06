@@ -3,6 +3,7 @@ package me.anna.demo.models;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.HashSet;
 
 @Entity
 public class Role {
@@ -16,6 +17,9 @@ public class Role {
 
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
     private Collection<User> users;
+
+
+
 
 
 
@@ -44,4 +48,11 @@ public class Role {
     public void setUsers(Collection<User> users) {
         this.users = users;
     }
+
+
+
+
+
+
+
 }
